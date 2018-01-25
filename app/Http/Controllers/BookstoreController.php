@@ -18,8 +18,8 @@ class BookstoreController extends Controller
             'method' => __METHOD__,
             'file'  => __FILE__,
             'linenum'  => __LINE__,
-	    'bookstore' => Bookstore::with('bookRepository')
-                 ->get()
+            'bookstore' => Bookstore::with('bookRepository')
+                ->get()
         ]);
     }
 

@@ -2,8 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\Book::class, function (Faker $faker) 
-{
+$factory->define(App\Book::class, function (Faker $faker) {
     $title = $faker->sentence(5);
     $titleLen = (strlen($title)<63) ? strlen($title) : 63;
 

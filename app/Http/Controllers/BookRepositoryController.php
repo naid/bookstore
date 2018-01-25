@@ -18,10 +18,10 @@ class BookRepositoryController extends Controller
             'method' => __METHOD__,
             'file'  => __FILE__,
             'linenum'  => __LINE__,
-	    'book_repository' => BookRepository::with('bookstore')
-                 ->with('library')
-                 ->with('kiosk')
-                 ->get()
+            'book_repository' => BookRepository::with('bookstore')
+                ->with('library')
+                ->with('kiosk')
+                ->get()
         ]);
     }
 
@@ -36,12 +36,12 @@ class BookRepositoryController extends Controller
             'method' => __METHOD__,
             'file'  => __FILE__,
             'linenum'  => __LINE__,
-	    'book_repository' => BookRepository::with('bookstore')
-                 ->with('library')
-                 ->with('kiosk')
-                 ->with('bookAvailability.book')
-                 ->where(['id' => $id])
-                 ->get()
+            'book_repository' => BookRepository::with('bookstore')
+                ->with('library')
+                ->with('kiosk')
+                ->with('bookAvailability.book')
+                ->where(['id' => $id])
+                ->get()
         ]);
     }
 

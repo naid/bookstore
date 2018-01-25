@@ -18,8 +18,8 @@ class CustomerController extends Controller
             'method' => __METHOD__,
             'file'  => __FILE__,
             'linenum'  => __LINE__,
-	    'customer' => Customer::with('user')
-                 ->get()
+            'customer' => Customer::with('user')
+                ->get()
         ]);
     }
 

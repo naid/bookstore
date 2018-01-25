@@ -18,8 +18,8 @@ class EmployeeController extends Controller
             'method' => __METHOD__,
             'file'  => __FILE__,
             'linenum'  => __LINE__,
-	    'employee' => Employee::with('user')
-                 ->get()
+            'employee' => Employee::with('user')
+                ->get()
         ]);
     }
 
@@ -34,7 +34,7 @@ class EmployeeController extends Controller
             'method' => __METHOD__,
             'file'  => __FILE__,
             'linenum'  => __LINE__,
-	    'book_transactions' => Employee::with('bookTransaction.bookRepository.bookstore')
+            'book_transactions' => Employee::with('bookTransaction.bookRepository.bookstore')
                  ->with('bookTransaction.bookRepository.library')
                  ->with('bookTransaction.bookRepository.kiosk')
                  ->with('bookTransaction')

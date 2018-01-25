@@ -7,5 +7,3 @@ $factory->define(App\BookAvailability::class, function () {
         'book_repository_id' => rand(1, 20),
     ];
 });
-
-

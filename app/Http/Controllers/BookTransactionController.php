@@ -18,7 +18,7 @@ class BookTransactionController extends Controller
             'method' => __METHOD__,
             'file'  => __FILE__,
             'linenum'  => __LINE__,
-	    'book_transaction' => BookTransaction::with('book')
+            'book_transaction' => BookTransaction::with('book')
                  ->with('bookRepository.bookstore')
                  ->with('bookRepository.library')
                  ->with('bookRepository.kiosk')
@@ -66,14 +66,14 @@ class BookTransactionController extends Controller
         $bookTransaction->customer_id = $request->input('customer_id');
         $bookTransaction->employee_id = $request->input('employee_id');
 
-	$result = $bookTransaction->save();
+        $result = $bookTransaction->save();
 
         return response()->json([
             'method' => __METHOD__,
             'file'  => __FILE__,
             'linenum'  => __LINE__,
-	    'result' => $result,
-	    'req' => $request->post()
+        'result' => $result,
+        'req' => $request->post()
         ]);
     }
 

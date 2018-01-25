@@ -18,8 +18,8 @@ class KioskController extends Controller
             'method' => __METHOD__,
             'file'  => __FILE__,
             'linenum'  => __LINE__,
-	    'kiosk' => Kiosk::with('bookRepository')
-                 ->get()
+            'kiosk' => Kiosk::with('bookRepository')
+                ->get()
         ]);
     }
 

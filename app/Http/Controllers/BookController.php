@@ -18,7 +18,7 @@ class BookController extends Controller
             'method' => __METHOD__,
             'file'  => __FILE__,
             'linenum'  => __LINE__,
-	    'book' => Book::all()
+            'book' => Book::all()
         ]);
     }
 
@@ -60,7 +60,7 @@ class BookController extends Controller
      */
     public function show($id)
     {
-	$book = Book::find($id);
+        $book = Book::find($id);
 
         return response()->json([
             'method' => __METHOD__,

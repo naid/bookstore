@@ -14,7 +14,7 @@ class BookRepositoryTableSeeder extends Seeder
     {
         factory(App\BookRepository::class, 20)->create()->each(function ($b) {
 
-            switch(rand(1,3)) {
+            switch (rand(1, 3)) {
                 case 1:
                     factory(App\Bookstore::class)->create(['book_repository_id' => $b->id]);
                     break;

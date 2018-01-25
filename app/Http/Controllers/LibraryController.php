@@ -18,8 +18,8 @@ class LibraryController extends Controller
             'method' => __METHOD__,
             'file'  => __FILE__,
             'linenum'  => __LINE__,
-	    'library' => Library::with('bookRepository')
-                 ->get()
+            'library' => Library::with('bookRepository')
+                ->get()
         ]);
     }
 

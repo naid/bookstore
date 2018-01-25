@@ -18,7 +18,7 @@ class BookAvailabilityController extends Controller
             'method' => __METHOD__,
             'file'  => __FILE__,
             'linenum'  => __LINE__,
-	    'book_availability' => BookAvailability::with('book')
+            'book_availability' => BookAvailability::with('book')
                  ->with('bookRepository.bookstore')
                  ->with('bookRepository.library')
                  ->with('bookRepository.kiosk')

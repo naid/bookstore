@@ -14,7 +14,7 @@ class UserTableSeeder extends Seeder
     {
         factory(App\User::class, 20)->create()->each(function ($user) {
 
-            switch(rand(1,2)) {
+            switch (rand(1, 2)) {
                 case 1:
                     factory(App\Employee::class)->create(['user_id' => $user->id]);
                     break;
